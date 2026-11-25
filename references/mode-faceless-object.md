@@ -1,6 +1,6 @@
 # 无人·实物（simon 调查封面，没有人物）
 
-样张：`examples/无人实物_3比4_v0.jpg`（照片主体偏小的旧版）、`examples/无人实物_3比4.jpg`、`examples/无人实物_4比3.jpg`、`examples/无人实物_16比9.jpg`（定稿三比例）（旧方格作业本里夹着 Trinity 老照片，右页写着 ζ 公式和零点，打了红勾，台灯打光）。
+样张：`examples/faceless-object_3x4_v0.jpg`（照片主体偏小的旧版）、`examples/faceless-object_3x4.jpg`、`examples/faceless-object_4x3.jpg`、`examples/faceless-object_16x9.jpg`（定稿三比例）（旧方格作业本里夹着 Trinity 老照片，右页写着 ζ 公式和零点，打了红勾，台灯打光）。
 
 ## 骨架
 - 和出镜·实物一样，只是把人物换成**更大的物件和桌面道具**（台灯、放大镜、铅笔、旧书）。
@@ -21,5 +21,5 @@
 右上角约 22% 宽 × 12% 高留空。
 除这些文字外不要任何文字、Logo、水印。中文逐字准确，缩成手机缩略图也能读。
 
-{自适应段·无人}
+{ADAPTIVE_FACELESS}
 ```
