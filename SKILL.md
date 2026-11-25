@@ -15,14 +15,20 @@ license: MIT
 
 无人模式把「人物的姿态、服装颜色、视线方向」换成「素材画面的主体位置、主色调、运动方向」。两段原文在 `references/adaptive.md`。模板末尾的 `{ADAPTIVE_ONCAM}` / `{ADAPTIVE_FACELESS}` 就是这两段，不能省。
 
-## 0. 先定模式和比例
-用户没说时，先给建议再问（如果所在项目有自己的封面规则，按项目规则走）：
+## 0. 先定模式、风格和比例
+用户没说时，先给建议再问（如果所在项目有自己的封面规则，按项目规则走）。
+
+**模式管结构**（人放哪、主体是什么）：
 
 | 模式 | 什么时候用 | 模板 |
 |---|---|---|
 | **出镜·实物** | 作者本人在讲：讲解、复盘、口播 | `references/mode-oncam-object.md` |
 | **无人·拼贴** | 科普、新闻解读，要冲击力，短视频信息流 | `references/mode-faceless-collage.md` |
 | **无人·实物** | 科普、讲史，有一个能演出来的比喻 | `references/mode-faceless-object.md` |
+
+**风格管长相**（配色、字体、背景）：`references/styles.md` 里有 23 种，分冲击类、清爽信息类、手作温度类，开头有一张「片型/平台 → 推荐风格」表。按片型挑 **3 个推荐**给用户选；用户说「你定」就用表里的首推。不指定风格时，三种模式各用模板自带的默认风格。
+
+**通用部件**：`references/building-blocks.md`，包括姿态库、证据卡写法、标题处理、标签点缀，写提示词时按需拼进去。
 
 比例默认三张：3:4（竖版信息流、小红书）、4:3（公众号、B 站）、16:9（横屏播放器）。**每个比例单独写提示词、重新排版，不拿一张去裁。**
 
@@ -47,12 +53,14 @@ license: MIT
 - 口径不超出事实：没证实的事加问号，或用「宣布 / 声称」。
 
 ## 3. 写提示词
-- 套用模式模板，存成 `<cover_dir>/<mode>_<ratio>/prompt.txt`（例：`faceless-object_3x4/prompt.txt`）。
+- 套用模式模板；选了风格就用风格卡的「风格段」替换模板里的「视觉语言」那行和标题、背景的颜色描述；姿态、证据卡、标题处理从 `references/building-blocks.md` 里挑。存成 `<cover_dir>/<mode>_<ratio>/prompt.txt`（例：`faceless-object_3x4/prompt.txt`）。
 - 第一行固定：`只生成一次图片，保存为当前目录下的 cover.png，然后回报原始文件路径和像素尺寸。不要生成多张。`
 - 出镜模式：参考图 1 是作者头像，第二行写 `必须是附带参考照片里的同一个人，不要换脸`。头像查找顺序：用户本次给的图 → 环境变量 `FENGMIAN_AVATAR` → `$SKILL/assets/avatar.png`。都没有就问用户要。表情默认**轻微惊讶**（眉毛轻扬、嘴微张、眼睛不瞪大），用户另有偏好就按用户的。
+- 用户给了喜欢的参考封面时，照 `styles.md` 末尾的格式提炼成一张新风格卡（只学配色、字体和版式逻辑，不照抄版面）。
 - **硬规则**（四个原 skill 横评时踩过的坑）：
   - 人物、主体、卡片**不能遮挡标题笔画**。提示词写明：「每个字都必须完整可认，遮挡只允许压到字形外缘」。
-  - 右上角约 22%×12% 留空，给平台角标或字标。
+  - 右上角约 22%×12% 不放物件和文字，给平台角标或字标。提示词要写「背景在这里自然延续，不要画任何色块、方框或占位标记」（横评时模型真的画了一块空色块）。
+  - 大字放在人物身后、或人物顶到标题的风格（2、4、5、6 号最容易出事），提示词改写成「人物的头顶和标题之间要留出明显空隙，人物不能和任何一个标题字重叠」，比「只压外缘」更保险（风格库示例里 4、5 号第一版都压了字）。
   - 英文长文卡只当质感；要能读的信息，放大成 ≤8 字的中文或数字。
   - 装饰元素 ≤5 个，避免营销号味。
 
@@ -79,4 +87,4 @@ license: MIT
 ffmpeg、Python 3 + Pillow；走 B 路要装 Codex CLI。脚本在 macOS 和 Linux 上都能跑；Windows 用 WSL 或 Git Bash。
 
 ## 来源
-融合自 [trustfuture/simon-skills](https://github.com/trustfuture/simon-skills)（调查封面规范、cover-qa）和 [pyang5166/gbro-cover-design](https://github.com/pyang5166/gbro-cover-design)（10 种构图风格，想换风格时翻），两者都是 MIT 许可。横评时还参考了 [oil-oil/oil-cover](https://github.com/oil-oil/oil-cover)、[Vivixiao980/xhs-cover-skill](https://github.com/Vivixiao980/xhs-cover-skill)。样张在 `examples/`。
+融合自四个 MIT 许可的封面 skill：[trustfuture/simon-skills](https://github.com/trustfuture/simon-skills)（调查封面、验收）、[pyang5166/gbro-cover-design](https://github.com/pyang5166/gbro-cover-design)（10 种构图）、[oil-oil/oil-cover](https://github.com/oil-oil/oil-cover)（科技杂志风、证据卡）、[Vivixiao980/xhs-cover-skill](https://github.com/Vivixiao980/xhs-cover-skill)（小红书风格、人物姿态）。样张在 `examples/`。

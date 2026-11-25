@@ -8,6 +8,30 @@
 |---|---|
 | ![](examples/faceless-object_16x9.jpg) | ![](examples/faceless-collage_16x9.jpg) |
 
+无人版换风格：对比卡片 [faceless-compare_3x4](examples/faceless-compare_3x4.jpg)、霓虹撞色 [faceless-neon_3x4](examples/faceless-neon_3x4.jpg)。
+
+<!-- styles:start -->
+## 23 种风格示例
+
+同一个题目「原子弹＝家庭作业？」、同一张作者照片，每种风格各出一张（3:4，Codex 生图，没有后期修改）。风格怎么写在 [`references/styles.md`](references/styles.md)。
+
+![风格墙](examples/styles-wall.jpg)
+
+| **1. 暗调实物（默认）** | **2. 深色渐变大字** | **3. 海报拼贴** | **4. 正面对视夹字** |
+|---|---|---|---|
+| <img src="examples/styles/s01.jpg" width="200"> | <img src="examples/styles/s02.jpg" width="200"> | <img src="examples/styles/s03.jpg" width="200"> | <img src="examples/styles/s04.jpg" width="200"> |
+| **5. 背景大字** | **6. 大字覆盖** | **7. 霓虹撞色 Y2K** | **8. 对比卡片** |
+| <img src="examples/styles/s05.jpg" width="200"> | <img src="examples/styles/s06.jpg" width="200"> | <img src="examples/styles/s07.jpg" width="200"> | <img src="examples/styles/s08.jpg" width="200"> |
+| **9. 清爽科技杂志** | **10. 轻 3D 屏幕** | **11. 结构图纸** | **12. 产品主视觉** |
+| <img src="examples/styles/s09.jpg" width="200"> | <img src="examples/styles/s10.jpg" width="200"> | <img src="examples/styles/s11.jpg" width="200"> | <img src="examples/styles/s12.jpg" width="200"> |
+| **13. 局部出镜** | **14. 极简留白** | **15. 人物侧置留白** | **16. 多层杂志排版** |
+| <img src="examples/styles/s13.jpg" width="200"> | <img src="examples/styles/s14.jpg" width="200"> | <img src="examples/styles/s15.jpg" width="200"> | <img src="examples/styles/s16.jpg" width="200"> |
+| **17. 纯文字强排** | **18. 思考提问手写** | **19. 马克笔圈画** | **20. 贴纸活力** |
+| <img src="examples/styles/s17.jpg" width="200"> | <img src="examples/styles/s18.jpg" width="200"> | <img src="examples/styles/s19.jpg" width="200"> | <img src="examples/styles/s20.jpg" width="200"> |
+| **21. 书房知性** | **22. 户外手写竖排** | **23. 背影构图** |
+| <img src="examples/styles/s21.jpg" width="200"> | <img src="examples/styles/s22.jpg" width="200"> | <img src="examples/styles/s23.jpg" width="200"> |
+<!-- styles:end -->
+
 ## 三种模式
 
 | 模式 | 适合 | 来源 |
@@ -72,4 +96,4 @@ examples/                样张
 - [pyang5166/gbro-cover-design](https://github.com/pyang5166/gbro-cover-design)：MIT，Copyright (c) 2026 狗哥笔记
 - 参考：[oil-oil/oil-cover](https://github.com/oil-oil/oil-cover)、[Vivixiao980/xhs-cover-skill](https://github.com/Vivixiao980/xhs-cover-skill)
 
-本仓库 MIT 许可，见 LICENSE。样张里的 1945 年 Trinity 核试验照片是美国政府作品，属于公有领域。
+本仓库 MIT 许可，见 LICENSE。示例图里的人物是仓库作者本人，经本人同意公开；请不要把这张脸用于其他用途。样张里的 1945 年 Trinity 核试验照片是美国政府作品，属于公有领域。
